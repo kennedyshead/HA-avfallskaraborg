@@ -1,3 +1,5 @@
+<img src="custom_components/avfallskaraborg/brand/icon.png" alt="" width="96" align="right">
+
 # Avfall & Återvinning Skaraborg — Home Assistant integration
 
 Waste collection dates for addresses served by [Avfall & Återvinning Skaraborg][aos],
@@ -64,6 +66,25 @@ automation:
             {{ state_attr('sensor.storgatan_11_nasta_tomning', 'bins') | join(', ') }}
 ```
 
+## Brand icon
+
+`custom_components/avfallskaraborg/brand/` ships the integration's icon
+(`icon.png` 256×256, `icon@2x.png` 512×512, plus the `icon.svg` it is rendered
+from). Home Assistant 2026.3 and newer serve brand images straight from the
+integration folder, so no submission to [home-assistant/brands][brands] is
+needed — and that repository no longer accepts custom integrations. On older
+cores the icon is simply not shown.
+
+Re-render the PNGs after editing the SVG:
+
+```console
+rsvg-convert -w 256 -h 256 custom_components/avfallskaraborg/brand/icon.svg \
+  -o custom_components/avfallskaraborg/brand/icon.png
+rsvg-convert -w 512 -h 512 custom_components/avfallskaraborg/brand/icon.svg \
+  -o custom_components/avfallskaraborg/brand/icon@2x.png
+```
+
+
 ## How it works, and its limits
 
 The integration calls two undocumented endpoints on `gullspang.avfallsapp.se`
@@ -88,3 +109,4 @@ Consequences worth knowing:
   values keep working, so the one captured at setup is stored and reused.
 
 [aos]: https://www.avfallskaraborg.se/
+[brands]: https://github.com/home-assistant/brands
