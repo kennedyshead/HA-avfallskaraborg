@@ -1,0 +1,47 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Find your address",
+        "description": "Enter a street address, at least three characters.",
+        "data": { "query": "Address" }
+      },
+      "reconfigure": {
+        "title": "Change address",
+        "description": "Enter a street address, at least three characters.",
+        "data": { "query": "Address" }
+      },
+      "select": {
+        "title": "Select your address",
+        "data": { "address": "Address" }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach Avfall & Återvinning Skaraborg.",
+      "no_results": "No addresses matched that search.",
+      "query_too_short": "Enter at least three characters."
+    },
+    "abort": {
+      "already_configured": "This address is already configured.",
+      "reconfigure_successful": "Address updated.",
+      "wrong_address": "The selected address does not match the one being reconfigured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": { "update_interval": "Update interval (hours)" }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_pickup": { "name": "Next pickup" },
+      "days_to_next_pickup": { "name": "Days to next pickup" }
+    },
+    "calendar": {
+      "pickups": { "name": "Pickups" }
+    }
+  }
+}

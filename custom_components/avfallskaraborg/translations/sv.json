@@ -1,0 +1,47 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Sök din adress",
+        "description": "Skriv in en adress, minst tre tecken.",
+        "data": { "query": "Adress" }
+      },
+      "reconfigure": {
+        "title": "Byt adress",
+        "description": "Skriv in en adress, minst tre tecken.",
+        "data": { "query": "Adress" }
+      },
+      "select": {
+        "title": "Välj din adress",
+        "data": { "address": "Adress" }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kunde inte nå Avfall & Återvinning Skaraborg.",
+      "no_results": "Inga adresser matchade sökningen.",
+      "query_too_short": "Skriv in minst tre tecken."
+    },
+    "abort": {
+      "already_configured": "Adressen är redan konfigurerad.",
+      "reconfigure_successful": "Adressen uppdaterad.",
+      "wrong_address": "Den valda adressen matchar inte den som ska konfigureras om."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Inställningar",
+        "data": { "update_interval": "Uppdateringsintervall (timmar)" }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_pickup": { "name": "Nästa tömning" },
+      "days_to_next_pickup": { "name": "Dagar till nästa tömning" }
+    },
+    "calendar": {
+      "pickups": { "name": "Tömningar" }
+    }
+  }
+}

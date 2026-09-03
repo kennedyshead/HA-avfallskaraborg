@@ -1,0 +1,12 @@
+{
+  "domain": "avfallskaraborg",
+  "name": "Avfall & Återvinning Skaraborg",
+  "codeowners": ["@knutmagn"],
+  "config_flow": true,
+  "documentation": "https://code.botwork.se/knutmagn/HA-avfallskaraborg",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://code.botwork.se/knutmagn/HA-avfallskaraborg/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
